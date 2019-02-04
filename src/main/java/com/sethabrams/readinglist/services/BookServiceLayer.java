@@ -36,7 +36,7 @@ public class BookServiceLayer implements BookService {
 
    public ResponseEntity<Book> addBook(Book book) throws URISyntaxException {
         Book newBook = bookRepository.save(book);
-        return ResponseEntity.created(new URI("/books" + newBook.getId()))
+        return ResponseEntity.created(new URI("/index/books" + newBook.getId()))
                 .body(newBook);
    }
 

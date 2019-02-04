@@ -10,6 +10,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
+@RequestMapping("/index")
 public class BookController {
 
     private final BookServiceLayer bookServiceLayer;
