@@ -1,16 +1,19 @@
 package com.sethabrams.readinglist.services.serviceinterfaces;
 
 import com.sethabrams.readinglist.domain.Book;
+import org.springframework.http.ResponseEntity;
+import java.net.URISyntaxException;
+import java.util.List;
 
 public interface BookService {
 
-    Book getAllBooks();
+    List<Book> getAllBooks();
 
-    Book getBook(Long id);
+    ResponseEntity<?> getBook(Long id);
 
-    Book addBook(Book book);
+    ResponseEntity<Book> addBook(Book book) throws URISyntaxException;
 
-    Book updateBook(Book book);
+    ResponseEntity<Book> updateBook(Book book);
 
-    Book deleteBook(Long id);
+    ResponseEntity<?> deleteBook(Long id);
 }
