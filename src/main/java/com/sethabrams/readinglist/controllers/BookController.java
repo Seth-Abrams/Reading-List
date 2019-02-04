@@ -10,7 +10,6 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
 public class BookController {
 
     private final BookServiceLayer bookServiceLayer;
@@ -30,7 +29,7 @@ public class BookController {
         return bookServiceLayer.getBook(id);
     }
 
-    @PostMapping("/books/")
+    @PostMapping("/books")
     public ResponseEntity<Book> addBook(@RequestBody Book book) throws URISyntaxException {
         return bookServiceLayer.addBook(book);
     }
