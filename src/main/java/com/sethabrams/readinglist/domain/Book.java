@@ -8,8 +8,14 @@ public class Book {
     @Id
     @GeneratedValue
     private Long id;
+
+    @Column
     private String title;
+
+    @Column
     private String author;
+
+    @Column
     private String isbn;
 
     public Book() {
